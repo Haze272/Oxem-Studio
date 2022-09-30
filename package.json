@@ -4,9 +4,10 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "start": "webpack --watch"
+    "dev": "webpack --mode=development",
+    "build": "webpack --mode=production",
+    "watch": "webpack --mode=development --watch",
+    "start": "webpack-dev-server --mode=development --progress --hot"
   },
   "repository": {
     "type": "git",
