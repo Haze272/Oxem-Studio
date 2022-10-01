@@ -1,2 +1,17 @@
 @import url("../fonts/Gilroy/stylesheet.css");
 @import url("../fonts/Nekst/stylesheet.css");
+
+html {
+  box-sizing: border-box;
+
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+h1 {
+    font-family: 'Nekst';
+    font-weight: 900;
+    font-style: normal;
+}

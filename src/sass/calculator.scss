@@ -1,5 +1,5 @@
 .calculator {
-    background-color: rgb(241, 241, 241);
+    //background-color: rgb(241, 241, 241);
     
     display: grid;
     grid-template-columns: repeat(12, [col] 1fr);
@@ -30,7 +30,6 @@
 }
 
 .header-sign {
-    background-color: rgb(213, 149, 255);
     grid-column: span 12;
 
     @media screen and (max-width: 1024px) {
