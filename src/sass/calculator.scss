@@ -6,6 +6,7 @@
     grid-column-gap: 32px;
     grid-template-rows: repeat(3, [row] max-content);
     margin: 0 48px 0 48px;
+    grid-column-gap: 32px;
 
     @media screen and (max-width: 1024px) {
         & {
@@ -16,7 +17,7 @@
 
     @media screen and (max-width: 768px) {
         & {
-            grid-template-columns: repeat(4, [col] max-content);
+            grid-template-columns: repeat(4, [col] 1fr);
         }
     }
 
