@@ -54,7 +54,7 @@
     }
 }
 
-input {
+.calc-input {
     width: 100%;
     height: 68px;
     border-radius: 16px;
@@ -67,6 +67,12 @@ input {
     font-weight: 900;
     font-style: normal;
     color: #575757;
+
+    @media screen and (max-width: 320px) {
+        & {
+            font-size: 20px;
+        }
+    }
 }
 
 .required{
@@ -129,3 +135,4 @@ input {
 .text_icon {
     font-size: 30px;
 }
+
