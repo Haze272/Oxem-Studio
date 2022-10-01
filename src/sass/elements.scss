@@ -1,0 +1,50 @@
+#references {
+    p {
+        font-family: 'Nekst';
+        font-weight: 900;
+        font-style: normal;
+        font-size: 30px;
+        color: #575757;
+    }
+}
+
+.buttons-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.button {
+    background-color: #FF9514;
+    color: white;
+    padding: 12px 24px 12px 24px;
+    border-radius: 40px;
+    cursor: pointer;
+
+    
+    font-family: "Gilroy";
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+
+    &:hover {
+        background-color: #111111;
+    }
+
+    &:active {
+        background-color: #575757;
+    }
+
+    &.disabled {
+        opacity: .4;
+    }
+
+    // REMOVE IN PROD!
+    &.allegedHover {
+        background-color: #111111;
+    }
+
+    &.allegedActive {
+        background-color: #575757;
+    }
+}
