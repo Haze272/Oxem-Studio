@@ -24,10 +24,12 @@ module.exports = {
             'sass-loader'
         ]
       },
+      /*
       {
         test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
         type: 'asset/inline',
       },
+      */
     ]
   },
   plugins: [
@@ -45,5 +47,4 @@ module.exports = {
     liveReload: true,
     port: 9000,
   },
-  watchFiles: ['src/*.html']
 };
