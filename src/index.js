@@ -13,7 +13,6 @@ const monthlyFee = document.getElementById('monthly-fee-value');
 
 function calculateMonthlyFee() {
     document.getElementById('monthly-fee-value').innerHTML = Math.trunc((carCost.value - initialPayment.value) * ((0.035 * Math.pow((1 + 0.035), leasePeriod.value)) / (Math.pow((1 + 0.035), document.getElementById('lease-period-value').value) - 1)));
-    console.log('monthly fee has been calculated!');
 }
 
 function calculateInitialPayment() {
