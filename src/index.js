@@ -11,6 +11,7 @@ const leasePeriod = document.getElementById('lease-period-value');
 const contractAmount = document.getElementById('lease-contract-value');
 const monthlyFee = document.getElementById('monthly-fee-value');
 
+
 function calculateMonthlyFee() {
     document.getElementById('monthly-fee-value').innerHTML = Math.trunc((carCost.value - initialPayment.value) * ((0.035 * Math.pow((1 + 0.035), leasePeriod.value)) / (Math.pow((1 + 0.035), document.getElementById('lease-period-value').value) - 1)));
 }
@@ -22,6 +23,7 @@ function calculateInitialPayment() {
 function calculateContractAmount() {
     contractAmount.innerHTML = parseInt(initialPayment.value) + (leasePeriod.value * parseInt(monthlyFee.innerHTML));
 }
+
 
 const cbox = document.querySelectorAll(".biba");
 for (let i = 0; i < cbox.length; i++) {
@@ -66,3 +68,24 @@ ybox.oninput = (e) => {
     calculateMonthlyFee();
     calculateContractAmount();
 }
+
+
+// Отправка данных на бэк
+document.getElementById('leave-request').addEventListener("click", () => {
+    let calculatorData  = {
+        car_cost: carCost.value,
+        initial_payment: initialPayment.value,
+        lease_period: leasePeriod.value,
+        lease_contract_amount: document.getElementById('lease-contract-value').innerHTML,
+        monthly_fee: monthlyFee
+    }
+
+    let json = JSON.stringify(calculatorData);
+    let url = 'https://eoj3r7f3r4ef6v4.m.pipedream.net';
+
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', url , false);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.send(json);
+    console.log(json);
+});
