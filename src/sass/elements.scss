@@ -54,6 +54,24 @@
     }
 }
 
+#leave-request {
+    @media screen and (max-width: 768px) {
+        & {
+            grid-column: span 4;
+        }
+
+        .button {
+            font-size: 22px;
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        & {
+            grid-column: span 2;
+        }
+    }
+}
+
 .calc-input {
     width: 100%;
     height: 68px;
